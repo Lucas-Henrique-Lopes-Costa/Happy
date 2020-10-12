@@ -1,0 +1,52 @@
+/* O que é uma regra css
+    /* selector body */
+body {
+  /* declaration */
+
+  /* property: value; */
+  color: red;
+} /* end of rule */
+
+/* ELE FUNCIONA COMO UMA CASCATA */
+
+#body {
+  color: green; /*VALOR "name"*/
+  color: rgb(255, 5, 60); /*VALOR "functions"*/
+  color: #212123; /*VALOR "numeric"*/
+}
+
+/*Você pode colocar essas regras dentro do HTML, que possui mais "força | sendo o último nível é quando você coloca o "style" dentro da TAG */
+
+* {
+  margin: 0; /*Tira a barra de rolagem*/
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  color: white;
+}
+
+:root {
+  font-size: 62.5%;
+  /* o "em" e "rem" irá refletir aqui e são responsíveis */
+}
+
+body,
+input,
+button,
+textarea {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1;
+  font-family: "Nunito", sans-serif;
+
+  /*shorthand*/
+  font: 400 1.8rem/1 "Nunito", sans-serif;
+  /*o "rem" se baseia no root */
+}
+
+/* body {
+  font-size: 16px;
+  font-size: 0.6em; /*é um calcúlo feito a partir do elemento anterior(pai dele) a essa tag | tamanho flexível
+} */

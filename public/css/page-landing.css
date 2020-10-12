@@ -1,0 +1,62 @@
+#page-landing {
+  background: linear-gradient(329.54deg, #29b6d1 0%, #00c7c7 100%) no-repeat;
+
+  text-align: center;
+  min-height: 100vh;
+
+  display: flex;
+}
+
+#container {
+  margin: auto; /*ele alinha de maneira automática e ele SÓ CONSEGUE ALINHAR QUANDO TEM O DISPLAY "FLEX"*/
+
+  width: 90%;
+}
+
+.location, 
+h1,
+.visit p {
+  height: 16vh;
+}
+
+.visit a {
+  width: 8rem;
+  height: 8rem;
+  background: #ffd666;
+
+  border: none;
+  border-radius: 3rem;
+
+  display: flex;
+  align-items: center; /* alinha apenas o de cima e de baixo */
+  justify-content: center;
+
+  margin: auto; /*isso é mesmo que: margin: em cima, na direita em baixo, na esquerda*/
+
+  transition: background 500ms;
+}
+
+.visit a:hover { /*quando o mouse esta em cima*/
+    background: #96feff;
+}
+
+/* atraso para cada elemento */
+#logo {
+  animation-delay: 50ms;
+}
+
+.location {
+  animation-delay: 100ms;
+}
+
+main h1 {
+  animation-delay: 150ms;
+}
+
+.visit p {
+  animation-delay: 200ms;
+}
+
+.visit {
+  animation-delay: 250ms;
+}

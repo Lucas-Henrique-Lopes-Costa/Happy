@@ -10,13 +10,37 @@
 #container {
   margin: auto; /*ele alinha de maneira automática e ele SÓ CONSEGUE ALINHAR QUANDO TEM O DISPLAY "FLEX"*/
 
-  width: 90%;
+  width: min(90%, 112rem); /*fica 90% até chegar em 1120px = 112rem*/
 }
 
-.location, 
+.location,
 h1,
 .visit p {
   height: 16vh;
+}
+
+/* atraso para cada elemento */
+#logo {
+  animation-delay: 50ms;
+}
+
+.location {
+  animation-delay: 100ms;
+  font-size: 2.4rem;
+  line-height: 1.5;
+}
+
+main h1 {
+  animation-delay: 150ms;
+  font-size: clamp(
+    3rem,
+    8vw,
+    8.4rem
+  ); /*o mínimo que ele coloca é 4rem o ideal é 8vw e o máximo é 8.4rem*/
+}
+
+.visit p {
+  animation-delay: 200ms;
 }
 
 .visit a {
@@ -34,29 +58,62 @@ h1,
   margin: auto; /*isso é mesmo que: margin: em cima, na direita em baixo, na esquerda*/
 
   transition: background 500ms;
-}
-
-.visit a:hover { /*quando o mouse esta em cima*/
-    background: #96feff;
-}
-
-/* atraso para cada elemento */
-#logo {
-  animation-delay: 50ms;
-}
-
-.location {
-  animation-delay: 100ms;
-}
-
-main h1 {
-  animation-delay: 150ms;
-}
-
-.visit p {
-  animation-delay: 200ms;
-}
-
-.visit {
   animation-delay: 250ms;
+}
+
+.visit a:hover {
+  /*quando o mouse esta em cima*/
+  background: #96feff;
+}
+
+/* Desktop version*/
+
+@media (min-width: 760px) {
+  /*Quando tiver uma largura de 760px para cima ele obedece a regra abaixo*/
+  #container {
+    /* shortand: background: image repeat position / size */
+    /* background-position: center; /*alia o eixo x e y */
+    padding: 6rem 2rem;
+    background: url("../images/bg.svg") no-repeat 80% /
+      clamp(30rem, 54vw, 56rem) /*ajusta o tamanho da imagem*/;
+  }
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .location,
+  h1,
+  .visit p {
+    height: initial;
+    text-align: initial;
+  }
+  .location {
+    text-align: right;
+    font-size: 2.4rem;
+    line-height: 1.5;
+  }
+  main h1 {
+    /* font-size: 8vw; */
+    /*didive a largura da tela inteira em 100 pedaços e PEGA apenas 8, mas fica muito grande e não se tem uma precisão*/
+    font-weight: bold;
+    line-height: 0.88;
+
+    margin: clamp(10%, 9vh, 12%) 0 1px;
+
+    width: min(300px, 80%);
+  }
+  .visit {
+    display: flex;
+    align-items: right;
+    justify-content: space-between;
+  }
+  .visit p {
+    font-size: 2.4rem;
+    line-height: 1.5;
+    width: clamp(20rem, 20vw, 30rem);
+  }
+  .visit a {
+    margin: initial;
+  }
 }

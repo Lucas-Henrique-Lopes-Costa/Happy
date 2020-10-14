@@ -1,30 +1,34 @@
-/* O que é uma regra css
-    /* selector body */
-body {
-  /* declaration */
+/*
+  /* O que é uma regra css
+      /* selector body /*
+  body {
+    /* declaration /*
 
-  /* property: value; */
-  color: red;
-} /* end of rule */
+    /* property: value; /*
+    color: red;
+  } /* end of rule /*
 
-/* ELE FUNCIONA COMO UMA CASCATA */
+  /* ELE FUNCIONA COMO UMA CASCATA /*
 
-#body {
-  color: green; /*VALOR "name"*/
-  color: rgb(255, 5, 60); /*VALOR "functions"*/
-  color: #212123; /*VALOR "numeric"*/
-}
+  #body {
+    color: green; /*VALOR "name"/*
+    color: rgb(255, 5, 60); /*VALOR "functions"/*
+    color: #212123; /*VALOR "numeric"/*
+  }
 
-/*Você pode colocar essas regras dentro do HTML, que possui mais "força | sendo o último nível é quando você coloca o "style" dentro da TAG */
+  /*Você pode colocar essas regras dentro do HTML, que possui mais "força | sendo o último nível é quando você coloca o "style" dentro da TAG /*
+*/
 
 * {
   margin: 0; /*Tira a barra de rolagem*/
   padding: 0;
+  box-sizing: border-box; /*não  soma o padding com a margin*/
 }
 
 body {
   height: 100vh;
   color: white;
+  background: #EBF3F5;
 }
 
 :root {

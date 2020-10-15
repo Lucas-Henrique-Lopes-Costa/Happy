@@ -39,16 +39,8 @@
     // Array []
 */
 
-// Options
-const options = {
-    touchZoom: false,
-    doubleClickCoom: false,
-    scrollWheelZoom: false,
-    zoomControl: false
-}
-
 //create map
-const map = L.map('mapid', options).setView([-20.1480625,-44.8850062], 15);
+const map = L.map('mapid').setView([-20.1480625,-44.8850062], 15);
 
 // create and add title
 L.tileLayer(
@@ -64,8 +56,7 @@ L.tileLayer(
 const icon = L.icon ({
     iconUrl: "./public/images/map-marker.svg", 
     iconSize: [58,68],
-    iconAnchor: [29, 68],
-    iconAnchor: [170, 2]
+    iconAnchor: [29, 68]
 })
 
 // create popup overlay

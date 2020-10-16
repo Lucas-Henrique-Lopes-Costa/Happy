@@ -1,0 +1,77 @@
+<!-- 
+    Se você for encrever palavras com espço utilice "_" ou "-""
+    
+    HTML
+        Hiper-Texto
+    
+    Mackup
+        marcaçao com <tags>
+    
+    Language
+        Linguagem
+
+    Abrir um servidor(local) => live server
+
+    http://127.0.0.1:5500/ = todo site tem um domínio que esconte essa porta
+ -->
+
+<!DOCTYPE html>
+<!-- Explica o tipo de HTML que esta usando, no caso HTML 5 -->
+<html lang="pt-br">
+  <!-- Isto é um ATRIBUTO -->
+  <head>
+    <!-- Configura o site -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Happy</title>
+
+    <link rel="icon" href="/images/logo-icon.png" />
+    <!-- Adicionando um icone no aba da página | o "href" é o caminho que ele irá buscar para "puxar o icone" | o "./" é o diretório rot (inicial)-->
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/animations.css" />
+    <link rel="stylesheet" href="/css/page-landing.css" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body id="happy-header">
+    <!-- parte branca do site -->
+    <div id="page-landing">
+      <div id="container">
+        <header>
+          <img
+            class="animate-up"
+            id="logo"
+            src="/images/logo.svg"
+            alt="Logo da Happy"
+          />
+
+          <div class="location animate-up">
+            <strong>Divinópolis</strong>
+            <!-- Algumas tags tem cada, por exemplo: a tag "strong" é do tipo de display => INLINE = ocupa o necessário -->
+            <p>Minas Gerais</p>
+            <!-- Já a tag "p" é do tipo de display => BLOCK = ocupa a linha toda da janela -->
+          </div>
+        </header>
+        <main>
+          <!-- Parte principal da página -->
+          <h1 class="animate-up">Leve felicidade para o mundo!</h1>
+
+          <section class="visit">
+            <p class="animate-up">
+              Visite orfanatos e mude o dia de muitas crianças.
+            </p>
+
+            <a href="/orphanages" title="VISITE UM ORFANATO" class="animate-up">
+              <img src="/images/arrow.svg" alt="Ir para o mapa" />
+            </a>
+          </section>
+        </main>
+      </div>
+    </div>
+  </body>
+</html>

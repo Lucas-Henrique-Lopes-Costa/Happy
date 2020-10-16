@@ -40,7 +40,7 @@
 */
 
 //create map
-const map = L.map('mapid').setView([-20.1480625,-44.8850062], 15);
+const map = L.map('mapid').setView([-20.1480625, -44.8850062], 15);
 
 // create and add title
 L.tileLayer(
@@ -52,25 +52,40 @@ L.tileLayer(
 ).addTo(map);
 
 // create icon
-
-const icon = L.icon ({
-    iconUrl: "./public/images/map-marker.svg", 
+const icon = L.icon({
+    iconUrl: "/images/map-marker.svg",
     iconSize: [58, 68],
     iconAnchor: [29, 68], // fiza o icone
     popupAnchor: [170, 2] // fixa o popup
 })
 
-// create popup overlay
-const popup = L.popup({
-    closeButton: false,
-    className: "map-popup",
-    minWidth: 240,
-    minHeight: 240
-}).setContent('Lar das meninas <a href="orphanage.html?id=1" class="choose-orphanage"> <img src="./public/images/arrow-white.svg"> </a>')
+function addMarker({id, name, lat, lng}) { // desistriturando os dados => transforma em variáveis
+    // create popup overlay
+    const popup = L.popup({
+        closeButton: false,
+        className: "map-popup",
+        minWidth: 240,
+        minHeight: 240
+    // colocando varraáveis no tamplaete
+    }).setContent(`${name} <a href="/orphanage?id=${id}" class="choose-orphanage"> <img src="/images/arrow-white.svg"> </a>`)
 
-// Create and add marker | Adicionar um pop-up
-L.
-marker([-20.1480625,-44.8850062], { icon })// marcação | procura a variável
-.addTo(map) // adiciona ao mapa
-.bindPopup(popup) //ligue o pop-up pegando as pré-definições
-// .openPopup(); // feche o pop-up
+    // Create and add marker | Adicionar um pop-up
+    L.
+    marker([lat, lng], {icon}) // marcação | procura a variável
+        .addTo(map) // adiciona ao mapa
+        .bindPopup(popup) //ligue o pop-up pegando as pré-definições
+    // .openPopup(); // feche o pop-up
+}
+
+const orphanagesSpan = document.querySelectorAll('.orphanages span')
+
+orphanagesSpan.forEach( span => {
+    const orphanage = {
+        id: span.dataset.id,
+        name: span.dataset.name,
+        lat: span.dataset.lat,
+        lng: span.dataset.lng,
+    }
+
+    addMarker(orphanage) // o número adicionado será o número de Marker que tiver
+});

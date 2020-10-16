@@ -6,7 +6,11 @@ const options = {
     zoomControl: false
 }
 
-const map = L.map('mapid', options).setView([-20.1480625,-44.8850062], 16);
+// get values from html
+const lat = document.querySelector('span[data-lat').dataset.lat
+const lng = document.querySelector('span[data-lng]').dataset.lng
+
+const map = L.map('mapid', options).setView([lat,lng], 15);
 
 // create and add title
 L.tileLayer(
@@ -18,18 +22,17 @@ L.tileLayer(
 ).addTo(map);
 
 // create icon
-
 const icon = L.icon ({
     iconUrl: "/images/map-marker.svg", 
-    iconSize: [58,68],
+    iconSize: [58, 68],
     iconAnchor: [29, 68],
-    iconAnchor: [170, 2]
+    popupAnchor: [170, 2]
 })
 
 
 // Create and add marker | Adicionar um pop-up
 L.
-marker([-20.1480625,-44.8850062], { icon })// marcação | procura a variável
+marker([lat, lng], { icon })// marcação | procura a variável
 .addTo(map) // adiciona ao mapa
 
 // Image Gallary

@@ -12,12 +12,14 @@ const icon = L.icon ({
     iconAnchor: [29, 68]
 })
 
-// create and add marker
+let needLatAndLng;
 
+// create and add marker
 let marker; // você pode alterar
 
 map.on('click', (event) => { // ele é chamado toda fez que tem um click no mapa
     // console.log(event) // mostra a latitute e longitute
+
     const lat = event.latlng.lat;
     const lng = event.latlng.lng;
 
@@ -107,4 +109,12 @@ function toggleSelect (event) {
         input.value = button.dataset.value // de acordo com o valor dos botões (sim = 1 | não = 0)
     
     // pegar o botão CLICADO
+}
+
+function validade(event) {
+    // validar se lat e lng estão preenchidos
+    if (marker != "") {
+        event.preventDefault() // não envia o formulário
+        alert("Escolha um ponto no mapa")    
+    }
 }

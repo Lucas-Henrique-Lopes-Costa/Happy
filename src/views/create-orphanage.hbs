@@ -54,7 +54,7 @@
       </aside>
 
       <main class="animate-appear with-sidebar">
-        <form action="">
+        <form action="save-orphanage" method="post" onsubmit="validate(event)">
           <fieldset>
             <!-- criando partes do Formulário -->
             <legend>Dados</legend>
@@ -103,6 +103,7 @@
                     name="images"
                     placeholder="Cole o link da imagem aqui"
                     required
+                    type="url"
                   />
                   <!-- O placeholder some quando começa a digitar -->
                   <span onclick="deleteField(event)">
@@ -126,8 +127,8 @@
 
             <div class="input-block">
               <!-- O "id" do input deve ser o mesmo que o "for" do label -->
-              <label for="about"> Instruções </label>
-              <textarea type="text" id="about" name="about" required></textarea>
+              <label for="instrutions"> Instruções </label>
+              <textarea type="text" id="about" name="instrutions" required></textarea>
               <!-- Entrada de dados -->
             </div>
 

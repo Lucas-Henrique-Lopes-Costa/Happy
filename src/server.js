@@ -14,6 +14,9 @@ const pages = require('./pages.js') // chama o objeto para cá
 const server = express() // se torna uma função
 
 server
+    // utilizar o body do req
+    .use(express.urlencoded({ extended: true }))
+
     // utilizando os aquivos estátivos
     .use(express.static('public')) // cria todos as rotas para o "public". Mas precisamos alterar os caminho => tirar o public
 
@@ -47,6 +50,7 @@ server
     .get('/orphanages', pages.orphanages)
     .get('/orphanage', pages.orphanage)
     .get('/create-orphanage', pages.createOrphanage) // não pode ter traçoes => use CamelCase
+    .post('/save-orphanage', pages.saveOrphanage)
 
 // LIGAR O SERVIDOR
 server.listen(5500)

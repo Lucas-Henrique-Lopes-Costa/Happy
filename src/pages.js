@@ -1,24 +1,89 @@
-const orphanages = require('./database/fakedata.js')
+const Database = require("./database/db");
+const saveOrphanage = require("./database/saveOrphanage");
 
-module.exports = { // essa linha exporta esse objeto
+module.exports = {
+    // essa linha exporta esse objeto
 
-    index: function(req, res) { // aplicando a função como uma propriedade
+    index: function (req, res) {
+        // aplicando a função como uma propriedade
         /* const city = req.query.city
-        return res.render('index', { city }) */ // colocando o nome da cidade por meio da url
+            return res.render('index', { city }) */ // colocando o nome da cidade por meio da url
 
-        return res.render('index')
+        return res.render("index");
     },
 
-    orphanages(req, res) {
-        return res.render('orphanages', { orphanages })
+    async orphanages(req, res) {
+        try {
+            const db = await Database;
+            const orphanages = await db.all("SELECT * FROM orphanages");
+            return res.render("orphanages", {
+                orphanages
+            });
+        } catch (error) {
+            console.log(error);
+            return res.send("Erro no banco de dados");
+        }
     },
 
-    orphanage (req, res) {
-        return res.render('orphanage')
+    async orphanage(req, res) {
+
+        const id = req.query.id;
+
+        try {
+            const db = await Database;
+            const results = await db.all(`SELECT * FROM orphanages where id = "${id}"`);
+            const orphanage = results[0]
+
+            orphanage.images = orphanage.images.split(','); // procura todas as vírgulas e transforma em um array | split = dividir
+            orphanage.firstImage = orphanage.images[0]
+
+            if (orphanage.open_on_weekends == "0") {
+                orphanage.open_on_weekends = false
+            } else {
+                orphanage.open_on_weekends = true
+            }
+
+            return res.render('orphanage', {
+                orphanage
+            })
+        } catch {
+            console.log(error);
+            return res.send("Erro no banco de dados");
+        }
     },
 
-    createOrphanage (req, res) {
-        return res.render('create-orphanage')
+    createOrphanage(req, res) {
+        return res.render("create-orphanage");
+    },
+
+    async saveOrphanage(req, res) {
+        const fields = req.body
+
+        // validando se os campos estão preenchidos
+        if (Object.values(fields).includes('')) {
+            return res.send('Todos os campos devem ser PREENCHIDOS');
+        }
+
+        try {
+            //salvar um orfanato
+            const db = await Database
+            await saveOrphanage(db, {
+                lat: fields.lat,
+                lng: fields.lng,
+                name: fields.name,
+                about: fields.about,
+                whatsapp: fields.whatsapp,
+                images: fields.images.toString(),
+                intructions: fields.intructions,
+                opening_hours: fields.opening_hours,
+                open_on_weekends: fields.open_on_weekends,
+            })
+
+            // redirecionamento
+            return res.redirect('/orphanages')
+        } catch (error) {
+            console.log(error)
+            return res.send('Erro no banco de dados')
+        }
     }
-
-}
+};

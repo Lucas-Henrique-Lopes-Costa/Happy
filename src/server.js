@@ -49,7 +49,7 @@ server
     .get('/', pages.index)
     .get('/orphanages', pages.orphanages)
     .get('/orphanage', pages.orphanage)
-    .get('/create-orphanage', pages.createOrphanage) // não pode ter traçoes => use CamelCase
+    .get('/create-orphanage', pages.createOrphanage) // não pode ter traços => use CamelCase
     .post('/save-orphanage', pages.saveOrphanage)
 
 // LIGAR O SERVIDOR

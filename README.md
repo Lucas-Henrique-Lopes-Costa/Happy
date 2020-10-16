@@ -23,8 +23,6 @@ The purpose of this application is to locate the orphanages that are close to yo
 Type the command in the terminal: ```npm start```
 
 After **started** open the link in your browser: [Access](http://localhost:5500/) -Access to Local Host-
-
-__*Website developed with the help of RoktSeat*__
 ---
 # Happy
 ## Fazendo o mundo mais Feliz com pequenas ações. Faça sua parte!

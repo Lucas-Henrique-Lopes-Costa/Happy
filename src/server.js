@@ -55,6 +55,13 @@ server
 // LIGAR O SERVIDOR
 server.listen(5500)
 
+// caso dê algum erro:
+// 1 - Listar todos os processos que utilizam uma porta específica: lsof -i :[Porta] 
+// Ex.: lsof -i :4000
+
+// 2 - Matar processo baseado no PID que foi listado pelo comando anterior: kill -9 [Número do pid do processo] 
+// Ex.: kill -9 1112
+
 // abre o terminal
 // digita: "npm install -g npm"
 // mas para salvar as alterações precisa de reniciar o servidor => intale o "npm install nodemon"

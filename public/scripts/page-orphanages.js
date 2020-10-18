@@ -59,19 +59,26 @@ const icon = L.icon({
     popupAnchor: [170, 2] // fixa o popup
 })
 
-function addMarker({id, name, lat, lng}) { // desistriturando os dados => transforma em variáveis
+function addMarker({
+    id,
+    name,
+    lat,
+    lng
+}) { // desistriturando os dados => transforma em variáveis
     // create popup overlay
     const popup = L.popup({
         closeButton: false,
         className: "map-popup",
         minWidth: 240,
         minHeight: 240
-    // colocando varraáveis no tamplaete
+        // colocando varraáveis no tamplaete
     }).setContent(`${name} <a href="/orphanage?id=${id}" class="choose-orphanage"> <img src="/images/arrow-white.svg"> </a>`)
 
     // Create and add marker | Adicionar um pop-up
     L.
-    marker([lat, lng], {icon}) // marcação | procura a variável
+    marker([lat, lng], {
+            icon
+        }) // marcação | procura a variável
         .addTo(map) // adiciona ao mapa
         .bindPopup(popup) //ligue o pop-up pegando as pré-definições
     // .openPopup(); // feche o pop-up
@@ -79,7 +86,7 @@ function addMarker({id, name, lat, lng}) { // desistriturando os dados => transf
 
 const orphanagesSpan = document.querySelectorAll('.orphanages span')
 
-orphanagesSpan.forEach( span => {
+orphanagesSpan.forEach(span => {
     const orphanage = {
         id: span.dataset.id,
         name: span.dataset.name,

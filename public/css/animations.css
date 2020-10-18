@@ -2,8 +2,10 @@
 @keyframes up {
   from {
     opacity: 0;
-    transform: translateY(16px); /* move 16px para baixo */
+    transform: translateY(16px);
+    /* move 16px para baixo */
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -11,19 +13,23 @@
 }
 
 @keyframes right {
-  from{
-    transform: translateX(-100%); /*move tudo para fora da tela*/
+  from {
+    transform: translateX(-100%);
+    /*move tudo para fora da tela*/
   }
-  to{
-    transform: translateX(0); /* traz de novo */
+
+  to {
+    transform: translateX(0);
+    /* traz de novo */
   }
 }
 
 @keyframes apper {
-  from{
+  from {
     opacity: 0;
   }
-  to{
+
+  to {
     opacity: 1;
   }
 }
@@ -31,7 +37,8 @@
 .animate-up {
   animation-name: up;
   animation-duration: 300ms;
-  animation-fill-mode: backwards; /* assim que ele fizer a transição ele para com as definições aplicadas no elemento  */
+  animation-fill-mode: backwards;
+  /* assim que ele fizer a transição ele para com as definições aplicadas no elemento  */
 }
 
 .animate-right {

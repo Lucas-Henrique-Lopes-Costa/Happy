@@ -15,7 +15,9 @@ const server = express() // se torna uma função
 
 server
     // utilizar o body do req
-    .use(express.urlencoded({ extended: true }))
+    .use(express.urlencoded({
+        extended: true
+    }))
 
     // utilizando os aquivos estátivos
     .use(express.static('public')) // cria todos as rotas para o "public". Mas precisamos alterar os caminho => tirar o public

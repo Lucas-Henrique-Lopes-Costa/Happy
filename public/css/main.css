@@ -20,9 +20,11 @@
 */
 
 * {
-  margin: 0; /*Tira a barra de rolagem*/
+  margin: 0;
+  /*Tira a barra de rolagem*/
   padding: 0;
-  box-sizing: border-box; /*não  soma o padding com a margin*/
+  box-sizing: border-box;
+  /*não  soma o padding com a margin*/
 }
 
 body {

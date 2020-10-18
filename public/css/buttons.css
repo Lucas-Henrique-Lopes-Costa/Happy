@@ -32,10 +32,10 @@
 .button-select {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    
+
 }
 
-.button-select button{
+.button-select button {
     height: 6.4rem;
     background: #F5F8FA;
     border: 1px solid #D3E2E5;
@@ -51,7 +51,8 @@
     color: #37C77F;
 }
 
-.button-select button:first-child { /*seleciona o primeiro*/
+.button-select button:first-child {
+    /*seleciona o primeiro*/
     border-radius: 2rem 0 0 2rem;
 }
 

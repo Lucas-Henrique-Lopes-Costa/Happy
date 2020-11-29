@@ -63,7 +63,8 @@ fieldset legend {
     border-radius: 1rem;
 
     color: #5C8599;
-    outline: none;/* tira a linha preta em volta */
+    outline: none;
+    /* tira a linha preta em volta */
 }
 
 /* .input-block input:focus,
@@ -78,7 +79,8 @@ fieldset legend {
 }
 
 .input-block input:valid,
-.input-block textarea:valid { /*quando o input que estiver com "required" estiver preenchido*/
+.input-block textarea:valid {
+    /*quando o input que estiver com "required" estiver preenchido*/
     border: 1px solid #A1E9C5;
 }
 
@@ -109,7 +111,7 @@ fieldset legend {
     position: relative;
 }
 
-.new-upload + .new-upload {
+.new-upload+.new-upload {
     margin-top: 2.4rem;
 }
 

@@ -15,7 +15,9 @@ const server = express() // se torna uma função
 
 server
     // utilizar o body do req
-    .use(express.urlencoded({ extended: true }))
+    .use(express.urlencoded({
+        extended: true
+    }))
 
     // utilizando os aquivos estátivos
     .use(express.static('public')) // cria todos as rotas para o "public". Mas precisamos alterar os caminho => tirar o public
@@ -49,11 +51,18 @@ server
     .get('/', pages.index)
     .get('/orphanages', pages.orphanages)
     .get('/orphanage', pages.orphanage)
-    .get('/create-orphanage', pages.createOrphanage) // não pode ter traçoes => use CamelCase
+    .get('/create-orphanage', pages.createOrphanage) // não pode ter traços => use CamelCase
     .post('/save-orphanage', pages.saveOrphanage)
 
 // LIGAR O SERVIDOR
 server.listen(5500)
+
+// caso dê algum erro:
+// 1 - Listar todos os processos que utilizam uma porta específica: lsof -i :[Porta] 
+// Ex.: lsof -i :4000
+
+// 2 - Matar processo baseado no PID que foi listado pelo comando anterior: kill -9 [Número do pid do processo] 
+// Ex.: kill -9 1112
 
 // abre o terminal
 // digita: "npm install -g npm"

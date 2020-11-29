@@ -47,11 +47,13 @@ O objetivo dessa aplicação é localizar os orfanatos que estão perto de você
 ## INICIANDO NA MÁQUINA LOCAL
 
 Digite o comando no terminal: 
-```npm start
+```
+npm start
 ```
 
 Caso tenha algum erro, digite:
-```npm install
+```
+npm install
 npm rebuild
 ```
 

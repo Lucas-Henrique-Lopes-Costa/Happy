@@ -59,4 +59,8 @@ npm rebuild
 
 Após **inicado** abra o link no seu navegador: [Acesse](http://localhost:5500/) -Acesso ao Local Host-
 
+Para ter uma melhor experiência, ocute sua barra de favoritos do Chrome:
+
+ctrl + shift + b
+
 __*Site desenvolvido com ajuda da RoktSeat*__

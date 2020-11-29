@@ -55,8 +55,9 @@ L.tileLayer(
 
 const icon = L.icon ({
     iconUrl: "./public/images/map-marker.svg", 
-    iconSize: [58,68],
-    iconAnchor: [29, 68]
+    iconSize: [58, 68],
+    iconAnchor: [29, 68], // fiza o icone
+    popupAnchor: [170, 2] // fixa o popup
 })
 
 // create popup overlay

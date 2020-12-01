@@ -6,7 +6,7 @@
     <!-- Configura o site -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lar das Meninas | Happy</title>
+    <title>Diocese de Divinópolis | Happy</title>
 
     <!-- Adicionando o MAPA -->
     <link
@@ -22,15 +22,15 @@
       crossorigin=""
     ></script>
 
-    <link rel="icon" href="./public/images/logo-icon.png" />
+    <link rel="icon" href="/public/images/logo-icon.png" />
     <!-- Adicionando um icone no aba da página | o "href" é o caminho que ele irá buscar para "puxar o icone" | o "./" é o diretório rot (inicial)-->
 
-    <link rel="stylesheet" href="./public/css/main.css" />
-    <link rel="stylesheet" href="./public/css/animations.css" />
-    <link rel="stylesheet" href="./public/css/sidebar.css" />
-    <link rel="stylesheet" href="./public/css/map.css" />
-    <link rel="stylesheet" href="./public/css/buttons.css" />
-    <link rel="stylesheet" href="./public/css/page-orphanage.css" />
+    <link rel="stylesheet" href="../public/css/main.css" />
+    <link rel="stylesheet" href="../public/css/animations.css" />
+    <link rel="stylesheet" href="../public/css/sidebar.css" />
+    <link rel="stylesheet" href="../public/css/map.css" />
+    <link rel="stylesheet" href="../public/css/buttons.css" />
+    <link rel="stylesheet" href="../public/css/page-orphanage.css" />
 
     <link
       href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap"
@@ -41,47 +41,26 @@
     <div id="page-orphanage">
       <aside class="animate-right sidebar">
         <a href="/index.html">
-          <img src="./public/images/map-marker.svg" alt="Happy" />
+          <img src="../public/images/map-marker.svg" alt="Happy" />
         </a>
 
         <footer>
           <!-- Executar um JavaStript que volta para página anterior-->
           <button onclick="history.back()">
-            <img src="./public/images/arrow-back.svg" alt="Voltar" />
+            <img src="../public/images/arrow-back.svg" alt="Voltar" />
           </button>
         </footer>
       </aside>
 
       <main class="animate-appear with-sidebar">
         <div class="orphanage-details">
-          <img src="./public/images/home.jpg" alt="Lar das Meninas" />
+          <img src="../public/images/home.jpg" alt="Diocese de Divinópolis" />
 
           <div class="images">
             <button onclick="selectImage(event)" class="active" type="button">
               <img
-                src="https://i0.wp.com/affordable-volunteer-abroad.com/wp-content/uploads/2017/06/brazil-child-development-new.jpg?fit=2048%2C1536"
-                alt="Lar das Meninas"
-              />
-            </button>
-
-            <button onclick="selectImage(event)" class="" type="button">
-              <img
-                src="https://aws-noticias-pt.s3.amazonaws.com/2013/08/trabalhadores-orfanato.jpg"
-                alt="Lar das Meninas"
-              />
-            </button>
-
-            <button onclick="selectImage(event)" class="" type="button">
-              <img
-                src="https://i.ytimg.com/vi/--bvf6XGeA0/maxresdefault.jpg"
-                alt="Lar das Meninas"
-              />
-            </button>
-
-            <button onclick="selectImage(event)" class="" type="button">
-              <img
-                src="https://portalgerais.com/wp-content/uploads/2017/11/alunos-ermida.jpg"
-                alt="Lar das Meninas"
+                src="https://lh5.googleusercontent.com/p/AF1QipMc7Prz2tdaGkubE5EEMTNg88uAX9r_NtWryvtL&#x3D;w408-h306-k-no"
+                alt="Diocese de Divinópolis"
               />
             </button>
 
@@ -89,13 +68,13 @@
             <button onclick="selectImage(event)" class="" type="button">
               <img
                 src="https://source.unsplash.com/random?id=6"
-                alt="Lar das Meninas"
+                alt="Diocese de Divinópolis"
               />
             </button> -->
           </div>
 
           <div class="orphanage-details-content">
-            <h1>Lar das Meninas</h1>
+            <h1>Diocese de Divinópolis</h1>
 
             <p>
               Presta assistência a crianças de 06 a 15 anos que se encontre em
@@ -105,7 +84,7 @@
             <div class="map-container">
               <div id="mapid"></div>
               <footer>
-                <a href="">Ver rotas no Google Maps</a>
+                <a href="https://www.google.com/maps/search/-20.145152496381762,-44.896035616999946?sa=X&ved=2ahUKEwjsh4SXt7nsAhUjGLkGHd_ZCyMQ8gEwAHoECAMQAQ" target="_blanck">Ver rotas no Google Maps</a>
               </footer>
             </div>
 
@@ -120,23 +99,30 @@
 
             <div class="open-details">
               <div class="hour">
-                <img src="./public/images/clock.svg" alt="Horários" />
+                <img src="../public/images/clock.svg" alt="Horários" />
                 Horário de visitas Das 18h até 8h
               </div>
-
-              <div class="open-on-weekends">
-                <img src="./public/images/info.svg" alt="Informações" />
+  
+  
+              <div class="open-on-weekends closed">
+                <img src="../public/images/info-red.svg" alt="Informações" />
                 Atendemos fim de semana
               </div>
-            </div>
 
-            <button class="primary-button" type="button">
-              <img
-                src="./public/images/whatsapp.svg"
-                alt="Mandar mensagem no WhatsApp"
-              />
+              <!-- <div class="open-on-weekends open">
+                <img src="../public/images/info.svg" alt="Informações" />
+                Atendemos fim de semana
+              </div> -->
+  
+  
+            </div>
+            <a href="https://api.whatsapp.com/send?phone=+553732299300&text=Olá, gostaria de marcar um dia para está indo visitar o este orfanato. Qual seria o melhor dia?"
+              target="_blank" class="primary-button" type="button">
+              <img src="../public/images/whatsapp.svg" alt="Mandar mensagem no WhatsApp" />
               Entrar em Contato
-            </button>
+              </button>
+            </a>
+          </div>
           </div>
         </div>
       </main>
@@ -144,6 +130,6 @@
 
     <!-- Adicionando o MAPA -->
 
-    <script src="./public/scripts/page-orphanage.js"></script>
+    <script src="../public/scripts/page-orphanage.js"></script>
   </body>
 </html>

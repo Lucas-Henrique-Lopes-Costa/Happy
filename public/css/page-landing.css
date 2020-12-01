@@ -75,7 +75,7 @@ main h1 {
     /* background-position: center; /*alia o eixo x e y */
     padding: 6rem 2rem;
     background: url("../images/bg.svg") no-repeat 80% /
-      clamp(30rem, 54vw, 56rem) /*ajusta o tamanho da imagem*/;
+      clamp(30rem, 34vw, 56rem) /*ajusta o tamanho da imagem*/;
   }
   header {
     display: flex;

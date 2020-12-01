@@ -40,7 +40,7 @@
 */
 
 //create map
-const map = L.map('mapid').setView([-20.1480625,-44.8850062], 15);
+const map = L.map('mapid').setView([-20.1480625, -44.8850062], 15);
 
 // create and add title
 L.tileLayer(
@@ -51,10 +51,10 @@ L.tileLayer(
     // }
 ).addTo(map);
 
-// create icon
+// create icon - Lar das Meninas
 
 const icon = L.icon ({
-    iconUrl: "./public/images/map-marker.svg", 
+    iconUrl: "../public/images/map-marker.svg", 
     iconSize: [58, 68],
     iconAnchor: [29, 68], // fiza o icone
     popupAnchor: [170, 2] // fixa o popup
@@ -66,7 +66,7 @@ const popup = L.popup({
     className: 'map-popup',
     minWidth: 240,
     minHeight: 240
-}).setContent('Lar das meninas <a href="orphanage.html?id=1" class="choose-orphanage"> <img src="./public/images/arrow-white.svg"> </a>')
+}).setContent('Lar das meninas <a href="../orphanages/Lar das Meninas.html" class="choose-orphanage"> <img src="public/images/arrow-white.svg"> </a>')
 
 // Create and add marker | Adicionar um pop-up
 L.
@@ -74,3 +74,28 @@ marker([-20.1480625,-44.8850062], { icon })// marcação | procura a variável
 .addTo(map) // adiciona ao mapa
 .bindPopup(popup) //ligue o pop-up pegando as pré-definições
 // .openPopup(); // feche o pop-up
+
+// create icon - Diocese de Divinópolis
+
+const icon2 = L.icon ({
+    iconUrl: "../public/images/map-marker.svg", 
+    iconSize: [58, 68],
+    iconAnchor: [29, 68], // fiza o icone
+    popupAnchor: [170, 2] // fixa o popup
+})
+
+// create popup overlay
+const popup2 = L.popup({
+    closeButton: false,
+    className: 'map-popup',
+    minWidth: 240,
+    minHeight: 240
+}).setContent('Diocese de Divinópolis <a href="../orphanages/Diocese de Divinópolis.html" class="choose-orphanage"> <img src="./public/images/arrow-white.svg"> </a>')
+
+// Create and add marker | Adicionar um pop-up
+L.
+marker([-20.145152496381762,-44.896035616999946], { icon })// marcação | procura a variável
+.addTo(map) // adiciona ao mapa
+.bindPopup(popup2) //ligue o pop-up pegando as pré-definições
+// .openPopup(); // feche o pop-up
+

@@ -112,3 +112,9 @@ a.create-orphanage:hover {
 
   z-index: 5;
 }
+
+@media (max-width: 760px) {
+  .animate-right {
+    display: none;
+  }
+}

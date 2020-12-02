@@ -34,3 +34,9 @@ aside.sidebar footer button:hover {
 .with-sidebar {
     padding-left: 96px;
 }
+
+@media (min-width: 760px) {
+    aside {
+        display: none;
+    }
+}

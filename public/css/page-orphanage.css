@@ -178,3 +178,9 @@ main {
     border: 1px solid #FFBCD4;
     color: #FF999D;
 }
+
+@media (max-width: 760px) {
+    aside {
+        display: none;
+    }
+}

@@ -66,7 +66,7 @@ const popup = L.popup({
     className: 'map-popup',
     minWidth: 240,
     minHeight: 240
-}).setContent('Lar das meninas <a href="../orphanages/Lar das Meninas.html" class="choose-orphanage"> <img src="public/images/arrow-white.svg"> </a>')
+}).setContent('Lar das meninas <a href="./orphanages/Lar das Meninas.html" class="choose-orphanage"> <img src="public/images/arrow-white.svg"> </a>')
 
 // Create and add marker | Adicionar um pop-up
 L.
@@ -90,7 +90,7 @@ const popup2 = L.popup({
     className: 'map-popup',
     minWidth: 240,
     minHeight: 240
-}).setContent('Diocese de Divinópolis <a href="../orphanages/Diocese de Divinópolis.html" class="choose-orphanage"> <img src="./public/images/arrow-white.svg"> </a>')
+}).setContent('Diocese de Divinópolis <a href="./orphanages/Diocese de Divinópolis.html" class="choose-orphanage"> <img src="./public/images/arrow-white.svg"> </a>')
 
 // Create and add marker | Adicionar um pop-up
 L.

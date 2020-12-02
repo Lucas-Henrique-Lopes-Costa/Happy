@@ -54,7 +54,7 @@ L.tileLayer(
 // create icon - Lar das Meninas
 
 const icon = L.icon ({
-    iconUrl: "../public/images/map-marker.svg", 
+    iconUrl: "./public/images/map-marker.svg", 
     iconSize: [58, 68],
     iconAnchor: [29, 68], // fiza o icone
     popupAnchor: [170, 2] // fixa o popup
@@ -78,7 +78,7 @@ marker([-20.1480625,-44.8850062], { icon })// marcação | procura a variável
 // create icon - Diocese de Divinópolis
 
 const icon2 = L.icon ({
-    iconUrl: "../public/images/map-marker.svg", 
+    iconUrl: "./public/images/map-marker.svg", 
     iconSize: [58, 68],
     iconAnchor: [29, 68], // fiza o icone
     popupAnchor: [170, 2] // fixa o popup

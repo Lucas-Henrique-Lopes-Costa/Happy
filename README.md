@@ -22,7 +22,17 @@ The purpose of this application is to locate the orphanages that are close to yo
 
 Type the command in the terminal: ```npm start```
 
+If you any errors, type:
+``
+npm install
+rebuild npm
+``
+
 After **started** open the link in your browser: [Access](http://localhost:5500/) -Access to Local Host-
+
+For a better experience, use Chrome and remove your bookmarks bar:
+
+ctrl + shift + b
 ---
 # Happy
 ## Fazendo o mundo mais Feliz com pequenas ações. Faça sua parte!

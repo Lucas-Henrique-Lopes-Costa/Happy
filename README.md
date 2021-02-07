@@ -7,6 +7,8 @@ The purpose of this application is to locate the orphanages that are close to yo
 ### USABILITY DEMONSTRATION VIDEO: 
 ![Demonstration Video](https://github.com/Lucas-Henrique-Lopes-Costa/Happy/blob/master/Happy.gif?raw=true)
 
+[YouTube Video](https://youtu.be/i3ekiMQov2k)
+
 ### Home screen:
 ![Home Screen](https://user-images.githubusercontent.com/60316602/96306444-0ff40380-0fd6-11eb-87f0-ebbea2e4b98b.png)
 
